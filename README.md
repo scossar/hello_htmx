@@ -1,3 +1,3 @@
-# A basic static website for local development
+# Hello htmx
 
-Serves files with the Python `http.server` module. _Only for local development_.
+NOTE: I'm just fooling around with this.
