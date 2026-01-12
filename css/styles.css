@@ -1,0 +1,104 @@
+:root {
+  --bg: #fff;
+  --text: #000;
+  --text-light: #666;
+  --border: #ccc;
+  --link: #0066cc;
+  --link-visited: #551a8b;
+  --link-active: #c00;
+  --fragment-bg: #fffef8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1a1a1a;
+    --text: #e0e0e0;
+    --text-light: #999;
+    --border: #444;
+    --link: #6db3f2;
+    --link-visited: #b894d6;
+    --link-active: #ff6b6b;
+    --fragment-bg: #1f1f1a;
+  }
+}
+
+/* because I got totally tripped up on this */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.17rem;
+}
+h4 {
+  font-size: 1rem;
+}
+h5 {
+  font-size: 0.83rem;
+}
+h6 {
+  font-size: 0.67rem;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-wrap: break-word;
+}
+
+a {
+  color: var(--link);
+  overflow-wrap: break-word;
+}
+
+a:visited {
+  color: var(--link-visited);
+}
+
+a:active {
+  color: var(--link-active);
+}
+
+button {
+  font-size: 1rem;
+  padding: 0.5em 1em; /* em units for button padding, so button-large {font-size:1.5rem}  would have scaled padding */
+  cursor: pointer;
+}
+
+input[type="text"],
+input[type="search"],
+textarea {
+  padding: 0.5rem;
+}
+
+.wrap {
+  max-width: 65ch;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
