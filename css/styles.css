@@ -102,3 +102,14 @@ textarea {
   margin: 0 auto;
   padding: 0 1rem;
 }
+
+.hidden {
+  display: none;
+}
+
+#link-results button {
+  margin: 0 0;
+  padding: 0 0;
+  background: var(--bg);
+  border: none;
+}

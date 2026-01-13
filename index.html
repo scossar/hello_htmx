@@ -6,12 +6,27 @@
     <meta name="htmx-config" content='{"selfRequestsOnly": false}' />
     <link rel="stylesheet" href="/css/main.css" />
     <script src="/js/htmx.min.js" defer></script>
-    <title>Scratch</title>
+    <title>Hello htmx</title>
   </head>
   <body>
     <div class="wrap">
-      <h1>Scratch pad</h1>
-      <p>This is a paragraph.</p>
+      <h1>Hello htmx</h1>
+      <p>
+        <a
+          hx-get="http://localhost:8000/fragment/572"
+          hx-target="#link-results"
+          hx-trigger="click once"
+          hx-on::after-request="
+          const target = document.getElementById('link-results');
+          this.onclick = function() {
+            target.classList.remove('hidden');
+          };
+          "
+          href="http://localhost:1313/notes/link-render-hooks/#the-components-of-a-markdown-link"
+          >The components of a markdown link</a
+        >
+      </p>
+      <div id="link-results"></div>
     </div>
   </body>
 </html>
